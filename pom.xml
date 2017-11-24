@@ -1,0 +1,125 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.homedepot</groupId>
+  <artifactId>EurekaClientConsumerProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>EurekaClientConsumerProject</name>
+  <url>http://maven.apache.org</url>
+
+   <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>1.8</java.version>
+  </properties>
+  	
+  	
+  <!-- if you would like to include mutiple parents in the same pom file use dependency management as below
+	You have to impor the other parent as below -->
+	<dependencyManagement>
+		<dependencies>
+    		<!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-parent -->
+			<dependency>
+    		<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-parent</artifactId>
+    		<version>Camden.SR7</version>
+    		<type>pom</type>
+    		<scope>import</scope>
+			</dependency>
+			
+			
+
+  	
+  	
+  <dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-dependencies</artifactId>
+   <version>1.4.6.RELEASE</version>
+   <type>pom</type>
+   <scope>import</scope>
+  </dependency>
+  		</dependencies>
+ </dependencyManagement>
+  	
+  <!-- 	
+  <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.4.0.RELEASE</version>
+    </parent>
+  
+
+  <parent>
+    		<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-parent</artifactId>
+    		<version>Camden.SR7</version>
+  </parent>
+  <parent>
+  		<groupId>org.springframework.cloud</groupId>
+    		<artifactId>spring-cloud-starter-parent</artifactId>
+    		<version>Camden.SR7</version>
+  </parent>
+  -->
+  
+  <dependencies>
+  
+  <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-eureka 
+			<dependency>
+    		<groupId>org.springframework.cloud</groupId>
+    		<version>1.0.0.RELEASE</version>
+    		<artifactId>spring-cloud-starter-eureka</artifactId>
+			</dependency>
+			-->
+			
+	<dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+	</dependency>		
+			
+  	<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+	</dependency>
+
+	 <dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-data-rest</artifactId>
+  		</dependency>
+
+   <!-- https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-data-mongodb -->
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-data-mongodb</artifactId>
+    <exclusions>
+    	<exclusion>
+    		<groupId>org.mongodb</groupId>
+    		<artifactId>mongodb-driver</artifactId>
+    	</exclusion>
+    </exclusions>
+</dependency>
+   
+   	<dependency>
+				<groupId>org.springframework.cloud</groupId>
+    			<artifactId>spring-cloud-starter-eureka-server</artifactId>
+			</dependency>
+   	
+
+	<dependency>
+				<groupId>org.springframework.cloud</groupId>
+    			<artifactId>spring-cloud-starter-config</artifactId>
+	</dependency>
+	
+	<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-tomcat</artifactId>
+    <version>1.4.6.RELEASE</version>
+	</dependency>
+	 <dependency>
+  		<groupId>org.springframework.boot</groupId>
+  		<artifactId>spring-boot-starter-data-rest</artifactId>
+  		<version>1.4.6.RELEASE</version>
+  	</dependency>
+  </dependencies>
+</project>
